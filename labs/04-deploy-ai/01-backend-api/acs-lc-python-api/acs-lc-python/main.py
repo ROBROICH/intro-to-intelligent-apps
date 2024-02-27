@@ -1,5 +1,5 @@
 import os
-from langchain.llms import AzureOpenAI
+from langchain_community.llms import AzureOpenAI
 from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.chat_models import AzureChatOpenAI
 from langchain.prompts import PromptTemplate
@@ -96,13 +96,24 @@ def execute_completion(request: CompletionRequest):
     vector = Vector(
         value=question_embedded,
         k=5,
-        fields="content_vector"
+        fields="vector"
     )
     results = list(search_client.search(
         search_text="",
         include_total_count=True,
         vectors=[vector],
-        select=["content"],
+        select=[
+            "title",
+            "overview",
+            "genre",
+            "tagline",
+            "release_date",
+            "popularity",
+            "vote_average",
+            "vote_count",
+            "runtime", 
+            "revenue"
+        ],
     ))
 
     # Build the Prompt and Execute against the Azure OpenAI to get the completion
