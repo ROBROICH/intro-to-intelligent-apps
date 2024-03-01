@@ -15,10 +15,6 @@ At the end of the workshop you will:
 ### 🌅 Morning (9:00 – 12:15)
 
 > *Focus: Introduction, First Steps & Prompt Engineering*
-
-* 📣 Intro (30min)
-  * Introductions & Setting Expectations
-  * Use Case Ideation & Brainstorming
 * 📣 [Intro to Azure OpenAI, Prompt Engineering & Demos (105min)](presentations/README.md)
   * Azure OpenAI Service
   * Demo(s)
