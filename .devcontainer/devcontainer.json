@@ -42,8 +42,8 @@
 
 	// Additional devcontainer feature configurations
 	"features": {
-		"ghcr.io/devcontainers/features/docker-in-docker:2": {
-			"version": "latest",
+		"ghcr.io/devcontainers/features/docker-in-docker:2.9.2": {
+			"version": "2.9.2",
 			"moby": true
 		},
 		"ghcr.io/devcontainers/features/git:1": {
